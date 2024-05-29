@@ -1,0 +1,1675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    tools:context=".fragment.OrganizationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:text="Organization > "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/rc_item"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:text="Constitution"/>
+    </LinearLayout>
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/rv_organization"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_org_1"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rc_pdf"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/rl_org_2">
+
+        <TextView
+            android:id="@+id/txt_exe_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="#2563eb"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:text="Executive Body"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_exe_body"
+            android:layout_below="@id/txt_exe_body"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/black"
+            android:text="Indian Railways Promotee Officers Federation (IRPOF)"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/text_exe_body"
+            android:id="@+id/header"
+            android:background="@drawable/background"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Executive Body"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Search..."
+                    android:background="@color/white"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:padding="8dp"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/header"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="#E1EDEF">
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/textPost"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="POST"
+                    android:padding="5dp"
+                    android:textAppearance="?attr/textAppearanceListItem" />
+
+                <TextView
+                    android:id="@+id/textName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="NAME"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:textAppearance="?attr/textAppearanceListItem" />
+
+                <TextView
+                    android:id="@+id/textDesignation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:text="DESIGNATION"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:textAppearance="?attr/textAppearanceListItem" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/header"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Vice Vice President	"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Shaju A Francis"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="Sr. DFM/Nanded/SCR"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Secy. General"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="H.C. Yadav"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="CWM/PD/DDU/ECR"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Secy. Finance"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="V.K. Bharti"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="APO/Legal/BH/NR"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Secretary"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Veereshwar Singh"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="ASTE/Tele/HQ/NR"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Secretary"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Avanish Arora"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="Sr. AFA/IC/CSTM/CR"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Org. Secy./CR"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Dr. T.V.S.N. Murty"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="XEN/TMC/PD/DDU/ECR"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Org. Secy./ECR"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Ravinder Kumar Raj"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="APO/ IV /SDAH"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Org. Secy./ER"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Biswa Narayan Banerjee"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="DGM/Law/BBS/ECoR"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Org. Secy./ECoR"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="M.M. Pattanayak"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="SEN/Design/K.Gate/NR"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Org. Secy./NR"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Rakesh Kumar Chhabra"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="SEN/Design/K.Gate/NER"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+
+
+
+
+<!--            </ScrollView>-->
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/rl_org_3">
+
+        <TextView
+            android:id="@+id/txt_cons_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="#2563eb"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:text="Constituent Units"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_cons_body"
+            android:layout_below="@id/txt_cons_body"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/black"
+            android:text="Indian Railways Promotee Officers Federation (IRPOF)"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/text_cons_body"
+            android:id="@+id/header_cons"
+            android:background="@drawable/background"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/title_cons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Constituent Units"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/search_cons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Search..."
+                    android:background="@color/white"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:padding="8dp"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/header_cons"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="#E1EDEF">
+
+                <CheckBox
+                    android:id="@+id/checkBox_cons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/textPost_cons"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="POST"
+                    android:padding="5dp"
+                    android:textAppearance="?attr/textAppearanceListItem" />
+
+                <TextView
+                    android:id="@+id/textName_cons"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="HEADQUATERS"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:textAppearance="?attr/textAppearanceListItem" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/header_cons"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Vice Vice President	"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Shaju A Francis"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Vice Vice President	"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Shaju A Francis"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Vice Vice President	"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Shaju A Francis"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Vice Vice President	"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Shaju A Francis"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Vice Vice President	"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Shaju A Francis"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Vice Vice President	"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Shaju A Francis"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Vice Vice President	"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Shaju A Francis"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Vice Vice President	"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Shaju A Francis"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Vice Vice President	"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Shaju A Francis"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/rl_org_4">
+
+        <TextView
+            android:id="@+id/txt_inc_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="#2563eb"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:text="Incumbency Board"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_inc_body"
+            android:layout_below="@id/txt_inc_body"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/black"
+            android:text="Indian Railways Promotee Officers Federation (IRPOF)"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/text_inc_body"
+            android:id="@+id/header_inc"
+            android:background="@drawable/background"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/title_inc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Executive Body"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/search_inc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Search..."
+                    android:background="@color/white"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:padding="8dp"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/header_inc"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="#E1EDEF">
+
+                <CheckBox
+                    android:id="@+id/checkBox_inc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/textPost_inc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="POST"
+                    android:padding="5dp"
+                    android:textAppearance="?attr/textAppearanceListItem" />
+
+                <TextView
+                    android:id="@+id/textName_inc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="NAME"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:textAppearance="?attr/textAppearanceListItem" />
+
+                <TextView
+                    android:id="@+id/textDesignatio_inc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:text="DESIGNATION"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:textAppearance="?attr/textAppearanceListItem" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/header"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Vice Vice President	"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Shaju A Francis"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="Sr. DFM/Nanded/SCR"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Secy. General"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="H.C. Yadav"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="CWM/PD/DDU/ECR"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Secy. Finance"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="V.K. Bharti"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="APO/Legal/BH/NR"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Secretary"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Veereshwar Singh"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="ASTE/Tele/HQ/NR"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Secretary"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Avanish Arora"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="Sr. AFA/IC/CSTM/CR"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Org. Secy./CR"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Dr. T.V.S.N. Murty"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="XEN/TMC/PD/DDU/ECR"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Org. Secy./ECR"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Ravinder Kumar Raj"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="APO/ IV /SDAH"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Org. Secy./ER"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Biswa Narayan Banerjee"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="DGM/Law/BBS/ECoR"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Org. Secy./ECoR"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="M.M. Pattanayak"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="SEN/Design/K.Gate/NR"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        >
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Org. Secy./NR"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="Rakesh Kumar Chhabra"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="SEN/Design/K.Gate/NER"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textAppearance="?attr/textAppearanceListItem" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+
+
+
+
+            <!--            </ScrollView>-->
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

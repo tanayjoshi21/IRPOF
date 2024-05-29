@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.EventFragment">
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/rl_3">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="#2563eb"
+            android:id="@+id/txt_events"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:text="@string/events"/>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/txt_events"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cd_1"
+                    android:layout_margin="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="left">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="@string/event_text"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Published On: 10/02/2024"
+                            android:textColor="#EA0909"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="View Details"
+                            android:textColor="#214EF3"
+                            android:textSize="17sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cd_1"
+                    android:id="@+id/cd_2"
+                    android:layout_margin="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="left">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Indian Railways Promotee Officers Federation (IRPOF) Is An Organization Of Promotee Officers Having Its Head Quarter At New Delhi."
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Published On: 10/02/2024"
+                            android:textColor="#EA0909"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="View Details"
+                            android:textColor="#214EF3"
+                            android:textSize="17sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cd_2"
+                    android:id="@+id/cd_3"
+                    android:layout_margin="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="left">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Indian Railways Promotee Officers Federation (IRPOF) Is An Organization Of Promotee Officers Having Its Head Quarter At New Delhi."
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Published On: 10/02/2024"
+                            android:textColor="#EA0909"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="View Details"
+                            android:textColor="#214EF3"
+                            android:textSize="17sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cd_3"
+                    android:id="@+id/cd_4"
+                    android:layout_margin="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="left">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Indian Railways Promotee Officers Federation (IRPOF) Is An Organization Of Promotee Officers Having Its Head Quarter At New Delhi."
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Published On: 10/02/2024"
+                            android:textColor="#EA0909"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="View Details"
+                            android:textColor="#214EF3"
+                            android:textSize="17sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cd_4"
+                    android:id="@+id/cd_5"
+                    android:layout_margin="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="left">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Indian Railways Promotee Officers Federation (IRPOF) Is An Organization Of Promotee Officers Having Its Head Quarter At New Delhi."
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Published On: 10/02/2024"
+                            android:textColor="#EA0909"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="View Details"
+                            android:textColor="#214EF3"
+                            android:textSize="17sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cd_5"
+                    android:id="@+id/cd_6"
+                    android:layout_margin="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="left">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Indian Railways Promotee Officers Federation (IRPOF) Is An Organization Of Promotee Officers Having Its Head Quarter At New Delhi."
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Published On: 10/02/2024"
+                            android:textColor="#EA0909"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="View Details"
+                            android:textColor="#214EF3"
+                            android:textSize="17sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cd_6"
+                    android:id="@+id/cd_7"
+                    android:layout_margin="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="left">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="@string/event_text"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Published On: 10/02/2024"
+                            android:textColor="#EA0909"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="View Details"
+                            android:textColor="#214EF3"
+                            android:textSize="17sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cd_7"
+                    android:id="@+id/cd_8"
+                    android:layout_margin="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="left">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Indian Railways Promotee Officers Federation (IRPOF) Is An Organization Of Promotee Officers Having Its Head Quarter At New Delhi."
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Published On: 10/02/2024"
+                            android:textColor="#EA0909"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="View Details"
+                            android:textColor="#214EF3"
+                            android:textSize="17sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cd_8"
+                    android:id="@+id/cd_9"
+                    android:layout_margin="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="left">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Indian Railways Promotee Officers Federation (IRPOF) Is An Organization Of Promotee Officers Having Its Head Quarter At New Delhi."
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Published On: 10/02/2024"
+                            android:textColor="#EA0909"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="View Details"
+                            android:textColor="#214EF3"
+                            android:textSize="17sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cd_9"
+                    android:id="@+id/cd_10"
+                    android:layout_margin="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="left">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Indian Railways Promotee Officers Federation (IRPOF) Is An Organization Of Promotee Officers Having Its Head Quarter At New Delhi."
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Published On: 10/02/2024"
+                            android:textColor="#EA0909"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="View Details"
+                            android:textColor="#214EF3"
+                            android:textSize="17sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cd_10"
+                    android:id="@+id/cd_11"
+                    android:layout_margin="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="left">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Indian Railways Promotee Officers Federation (IRPOF) Is An Organization Of Promotee Officers Having Its Head Quarter At New Delhi."
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Published On: 10/02/2024"
+                            android:textColor="#EA0909"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="View Details"
+                            android:textColor="#214EF3"
+                            android:textSize="17sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cd_11"
+                    android:id="@+id/cd_12"
+                    android:layout_margin="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="left">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Indian Railways Promotee Officers Federation (IRPOF) Is An Organization Of Promotee Officers Having Its Head Quarter At New Delhi."
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="Published On: 10/02/2024"
+                            android:textColor="#EA0909"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="7dp"
+                            android:paddingEnd="7dp"
+                            android:text="View Details"
+                            android:textColor="#214EF3"
+                            android:textSize="17sp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
